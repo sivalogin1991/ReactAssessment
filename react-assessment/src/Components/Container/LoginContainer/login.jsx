@@ -9,7 +9,7 @@ class Login extends Component {
             firstName: "",
             lastName: "",
             email: "",
-            password: ""
+            password: "",
         }
     }
 

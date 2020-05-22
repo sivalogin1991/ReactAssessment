@@ -6,13 +6,25 @@ class Children extends Component{
     }
 
     render(){
-       const  {labelName,onChange,value,type} = this.props
+       const  {labelName,onChange,value,type} = this.props;
         return(
             <div className="pd-10">
             <label>
               {labelName}
             </label>
-              <input type={type} onChange={onChange} value={value} name={labelName}/>
+            {
+              type !== "password" ?
+              <input
+               type={type} 
+               onChange={onChange} 
+              value={value}
+               name={type}  />
+               :
+               <input
+               type={type} 
+               onChange={onChange} 
+               name={type}  />
+            }
           </div> 
         )
     }
